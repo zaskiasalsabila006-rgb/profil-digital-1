@@ -1,0 +1,321 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
+   LATAR BELAKANG BERGERAK (ANIMATED BACKGROUND)
+   ========================================== */
+body {
+    background: linear-gradient(-45deg, #0b0b0f, #111827, #1a1025, #0b0b0f);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.4s ease;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.glass-nav {
+    background: rgba(11, 11, 15, 1);
+    backdrop-filter: blur(0px);
+    border-bottom: 1px solid transparent;
+    transition: background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+.glass-nav.scrolled {
+    background: rgba(11, 11, 15, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-card {
+    background: linear-gradient(145deg, #15151e 0%, #0b0b0f 100%);
+    border: 1px solid #52527a; 
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #ffffff, #a18cd1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-alt {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-purple-glow {
+    color: #a78bfa;
+    text-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+}
+
+.clip-image {
+    clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.tech-card { transition: all 0.3s ease; }
+.tech-card:hover { border-color: #8b5cf6; transform: translateY(-5px); }
+
+.project-card:hover img { transform: scale(1.05); }
+
+/* Animasi Fade In Hero */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    opacity: 0; 
+}
+
+.delay-100 { animation-delay: 100ms; transition-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; transition-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; transition-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; transition-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; transition-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; transition-delay: 600ms; }
+
+/* Typewriter */
+#typewriter-text::after {
+    content: '|';
+    animation: blink 1s step-end infinite;
+    margin-left: 2px;
+    color: #38b2ac;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Animasi Scroll berulang */
+.animate-on-scroll {
+    opacity: 0; 
+    transform: translateY(40px); 
+    transition: opacity 0.8s ease, transform 0.8s ease; 
+    will-change: transform, opacity;
+}
+
+.is-visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+/* ==========================================
+   GAYA UNTUK MODE TERANG (LIGHT MODE OVERRIDES)
+   ========================================== */
+body.light-mode {
+    background: linear-gradient(-45deg, #f8fafc, #eef2ff, #f5f3ff, #f8fafc);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    color: #0f172a;
+}
+
+body.light-mode .glass-nav {
+    background: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid transparent;
+    box-shadow: none;
+}
+
+body.light-mode .glass-nav.scrolled {
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .glass-nav a { color: #64748b; }
+body.light-mode .glass-nav a.text-white { color: #0f172a !important; }
+body.light-mode .glass-nav a:hover { color: #8b5cf6; }
+
+body.light-mode .gradient-text {
+    background: linear-gradient(to right, #0f172a, #6b21a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .gradient-text-alt {
+    background: linear-gradient(to right, #2563eb, #0891b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.light-mode .heading-text { color: #0f172a !important; }
+body.light-mode .text-gray-400,
+body.light-mode .project-desc,
+body.light-mode .body-desc { color: #475569 !important; }
+body.light-mode .text-gray-300 { color: #334155 !important; }
+
+body.light-mode .about-card {
+    background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
+    border-color: #e2e8f0;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+body.light-mode .tech-card {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+body.light-mode .tech-card:hover { 
+    border-color: #8b5cf6 !important; 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.2); 
+}
+
+body.light-mode .text-icon { color: #64748b !important; }
+
+body.light-mode .project-card {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+}
+body.light-mode .project-card h3 { color: #0f172a !important; }
+
+body.light-mode .bg-cardBg { background-color: #ffffff !important; border-color: #e2e8f0 !important; }
+body.light-mode .bg-cardBg h3 { color: #0f172a !important; }
+body.light-mode .bg-cardBg .text-gray-400 { color: #64748b !important; }
+body.light-mode .bg-cardBg .text-gray-300 { color: #475569 !important; }
+
+body.light-mode .sub-card,
+body.light-mode .inner-card {
+    background-color: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+}
+body.light-mode .bg-cardBg button { background-color: #e2e8f0 !important; color: #0f172a !important; }
+body.light-mode .bg-cardBg button:hover { background-color: #cbd5e1 !important; }
+
+body.light-mode .label-text { color: #0f172a !important; }
+body.light-mode .icon-wrapper { background-color: #f1f5f9 !important; }
+body.light-mode .stat-border { border-color: #e2e8f0 !important; }
+
+body.light-mode .cv-btn {
+    background-color: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    color: #475569 !important;
+}
+body.light-mode .cv-btn:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    border-color: #94a3b8 !important;
+}
+
+body.light-mode .form-border { border-color: #cbd5e1 !important; }
+body.light-mode .input-field,
+body.light-mode .input-area { color: #0f172a !important; }
+body.light-mode .input-area {
+    background-color: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+}
+body.light-mode .input-area:focus { border-color: #06b6d4 !important; } /* Diperbarui menjadi Cyan */
+
+body.light-mode .fa-brands { color: #64748b !important; }
+body.light-mode .fa-brands:hover { color: #8b5cf6 !important; }
+
+body.light-mode a.bg-white { background-color: #0f172a !important; color: #ffffff !important; }
+body.light-mode a.bg-white:hover { background-color: #1e293b !important; }
+body.light-mode a.border-gray-600 { border-color: #94a3b8 !important; color: #0f172a !important; }
+body.light-mode a.border-gray-600:hover { background-color: #f1f5f9 !important; border-color: #64748b !important; }
+
+body.light-mode .text-purple-glow { color: #7c3aed !important; text-shadow: none !important; }
+
+/* ==========================================
+   MENGHILANGKAN EFEK GELAP & GRAYSCALE GAMBAR
+   ========================================== */
+#beranda img, #tentang img {
+    filter: grayscale(0) !important;
+}
+.project-card img {
+    filter: grayscale(0) !important;
+    opacity: 1 !important;
+}
+.project-card .bg-gradient-to-t {
+    background: transparent !important;
+}
+body.light-mode .project-card .absolute.inset-0.bg-gradient-to-t {
+    background: transparent !important;
+}
+
+/* ==========================================
+   EFEK SCROLLSPY (MENU AKTIF)
+   ========================================== */
+.nav-link {
+    color: #9ca3af;
+}
+.nav-link:hover {
+    color: #ffffff;
+}
+.nav-link.active-nav {
+    color: #ffffff;
+}
+.nav-link.active-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #38b2ac; 
+    border-radius: 50%;
+}
+
+/* Scrollspy untuk Light Mode */
+body.light-mode .nav-link {
+    color: #64748b;
+}
+body.light-mode .nav-link:hover {
+    color: #8b5cf6;
+}
+body.light-mode .nav-link.active-nav {
+    color: #0f172a !important; 
+}
+body.light-mode .nav-link.active-nav::after {
+    background-color: #0891b2;
+}
+
+/* Hiding Project Desc for Hover Animation */
+.project-desc-container {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+.project-card:hover .project-desc-container {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 0.5rem;
+}
+/* ==========================================
+   TAMBAHAN: EFEK HOVER BORDER UNGU TIPIS & TEKS PUTIH POSTER PROJEK
+   ========================================== */
+
+/* 1. Mengatur ketebalan border dasar menjadi lebih tipis (1.5px) */
+.project-card {
+    border: 1.5px solid transparent !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease !important;
+}
+
+/* 2. Memunculkan border ungu tipis dan cahaya lembut saat di-HOVER (Mode Terang & Gelap) */
+.project-card:hover {
+    border-color: rgba(139, 92, 246, 0.6) !important; /* Ungu transparan agar tidak terlalu tebal/pekat */
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.25) !important; /* Efek cahaya tipis dan lembut */
+}
+
+/* 3. Memaksa semua teks di dalam poster tetap PUTIH khusus saat di MODE TERANG */
+body.light-mode .project-card h3,
+body.light-mode .project-card .project-desc,
+body.light-mode .project-card a {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+/* 4. Menjaga teks deskripsi proyek agar tetap kontras di mode terang */
+body.light-mode .project-card .project-desc {
+    opacity: 0.9 !important;
+}

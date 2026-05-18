@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salsabila. | Portfolio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        darkBg: '#0b0b0f',
+                        cardBg: '#15151e',
+                        cardBorder: '#2a2a3b',
+                        neonBlue: '#4facfe',
+                        neonPurple: '#8b5cf6',
+                        brandGreen: '#38b2ac', 
+                        btnGreenBg: '#0b2118',
+                        btnGreenBorder: '#123828'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased font-sans selection:bg-neonPurple selection:text-white">
+
+    <nav class="glass-nav fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter">Salsabila.</a>
+            
+            <div class="flex items-center space-x-6 md:space-x-8">
+                <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
+                    <a href="#beranda" class="nav-link active-nav transition relative" data-id="Beranda" data-en="Home">Beranda</a>
+                    <a href="#tentang" class="nav-link transition relative" data-id="Tentang" data-en="About">Tentang</a>
+                    <a href="#tech-stack" class="nav-link transition relative" data-id="Keahlian" data-en="Skills">Keahlian</a>
+                    <a href="#proyek" class="nav-link transition relative" data-id="Proyek" data-en="Projects">Proyek</a>
+                    <a href="#kontak" class="nav-link transition relative" data-id="Kontak" data-en="Contact">Kontak</a>
+                </div>
+
+                <div class="hidden md:block w-px h-6 bg-gray-700"></div>
+
+                <div class="flex items-center space-x-5">
+                    <button id="themeToggle" class="text-sm font-medium hover:text-neonBlue transition focus:outline-none">
+                        <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
+                    </button>
+                    
+                    <button id="langToggle" class="flex items-center space-x-1 text-sm font-medium hover:text-neonPurple transition focus:outline-none">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="langText">ID</span>
+                    </button>
+
+                    <button id="mobileMenuBtn" class="md:hidden text-xl focus:outline-none ml-2 text-gray-300 hover:text-white transition">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="fixed inset-0 bg-darkBg/95 backdrop-blur-lg z-[100] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col items-center justify-center space-y-8">
+        <button id="closeMenuBtn" class="absolute top-6 right-6 text-3xl text-gray-400 hover:text-white focus:outline-none transition">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#beranda" class="mobile-link text-2xl font-semibold text-gray-300 hover:text-white hover:scale-110 transition" data-id="Beranda" data-en="Home">Beranda</a>
+        <a href="#tentang" class="mobile-link text-2xl font-semibold text-gray-300 hover:text-white hover:scale-110 transition" data-id="Tentang" data-en="About">Tentang</a>
+        <a href="#tech-stack" class="mobile-link text-2xl font-semibold text-gray-300 hover:text-white hover:scale-110 transition" data-id="Keahlian" data-en="Skills">Keahlian</a>
+        <a href="#proyek" class="mobile-link text-2xl font-semibold text-gray-300 hover:text-white hover:scale-110 transition" data-id="Proyek" data-en="Projects">Proyek</a>
+        <a href="#kontak" class="mobile-link text-2xl font-semibold text-gray-300 hover:text-white hover:scale-110 transition" data-id="Kontak" data-en="Contact">Kontak</a>
+    </div>
+
+    <section id="beranda" class="pt-32 pb-20 min-h-screen flex items-center overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="text-sm tracking-widest text-gray-400 uppercase mb-2 font-medium animate-fade-in-up delay-100" data-id="HALO, SAYA" data-en="HELLO, I AM">HALO, SAYA</p>
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 gradient-text animate-fade-in-up delay-200">
+                    Zaskia Salsabila
+                </h1>
+                <h2 class="text-lg md:text-xl font-medium mb-6 flex items-center space-x-2 animate-fade-in-up delay-300">
+                    <span data-id="Seorang" data-en="A">Seorang</span> 
+                    <span class="gradient-text-alt ml-2">UI/UX Designer & Web Developer</span>
+                </h2>
+                
+                <div class="flex space-x-4 mb-8 text-gray-400 animate-fade-in-up delay-400">
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github text-xl"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-white transition"><i class="fa-brands fa-tiktok text-xl"></i></a>
+                </div>
+
+                <p id="typewriter-text" class="text-gray-400 mb-8 max-w-md leading-relaxed min-h-[72px]" data-id="Saya membantu bisnis dan individu mengubah ide menjadi solusi digital yang indah dan berfungsi." data-en="I help businesses and individuals turn ideas into beautiful and functional digital solutions."></p>
+
+                <div class="flex space-x-4 animate-fade-in-up delay-600">
+                    <a href="#proyek" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition flex items-center space-x-2">
+                        <span data-id="Lihat Proyek" data-en="View Projects">Lihat Proyek</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#kontak" class="border border-gray-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition" data-id="Kontak Saya" data-en="Contact Me">
+                        Kontak Saya
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative flex justify-center animate-fade-in-up delay-300">
+                <div class="absolute inset-0 bg-gradient-to-r from-neonBlue to-neonPurple opacity-10 blur-3xl rounded-full"></div>
+                <div class="bg-cardBg border border-cardBorder p-4 relative z-10 w-80 shadow-2xl rounded-2xl transform hover:-translate-y-2 transition duration-500">
+                    <div class="rounded-xl overflow-hidden mb-4">
+                        <img src="4.png" alt="Profile" class="w-full h-80 object-cover transition duration-500">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-base text-white heading-text">Zaskia Salsabila</h3>
+                        <p class="text-xs text-gray-400">Software Engineer</p>
+                    </div>
+                    <div class="mt-4 flex justify-between items-center bg-darkBg sub-card rounded-lg p-3 border border-gray-800">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="text-xs text-gray-400">@zaskiasalsabila_12</span>
+                        </div>
+                        <button class="text-xs bg-gray-800 text-gray-300 px-3 py-1 rounded-md hover:bg-gray-700">Contact Me</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="about-card p-10 md:p-14 flex flex-col md:flex-row gap-12 items-center relative">
+                
+                <div class="w-full md:w-1/3 flex justify-center animate-on-scroll mt-8 md:mt-0">
+                    <div id="about-tilt-img" class="w-48 h-72 md:w-56 md:h-80 transition-transform duration-200 ease-out relative" style="transform-style: preserve-3d; will-change: transform;">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-white/50 backdrop-blur-sm transform rotate-3 z-20 shadow-sm border border-white/10 rounded-sm"></div>
+                        <img src="2.png" alt="About Profile" class="w-full h-full object-cover transition duration-500 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-3xl font-bold mb-6 animate-on-scroll text-white heading-text">
+                        <span data-id="Tentang" data-en="About">Tentang</span> 
+                        <span class="text-purple-glow" data-id="Saya" data-en="Me">Saya</span>
+                    </h2>
+
+                    <div class="border-l-2 border-neonPurple pl-4 mb-6 animate-on-scroll">
+                        <p class="text-gray-400 italic font-light" data-id="Perpaduan logika kode dan estetika desain." data-en="Blending code logic with design aesthetics.">
+                            Perpaduan logika kode dan estetika desain.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 text-gray-300 text-sm md:text-base leading-relaxed mb-10 animate-on-scroll body-desc text-justify hyphens-auto break-words">
+                        <p data-id="Perjalanan saya di dunia digital dimulai sejak bangku kuliah sebagai seorang pembelajar coding. Bagi saya, coding dan desain adalah seni menyusun logika yang fungsional sekaligus estetik." 
+                           data-en="My digital journey began in college as a coding learner. To me, coding and design are the arts of structuring functional yet aesthetic logic.">
+                            Perjalanan saya di dunia digital dimulai sejak bangku kuliah sebagai seorang pembelajar <em>coding</em>. Bagi saya, <em>coding</em> dan desain adalah seni menyusun logika yang fungsional sekaligus estetik.
+                        </p>
+                        
+                        <p data-id="Saat ini, saya menempuh pendidikan Teknik Informatika di Universitas Jabal Ghafur. Kombinasi antara kemampuan teknis web development dan kepekaan visual UI/UX design adalah kekuatan utama saya dalam membangun solusi digital." 
+                           data-en="Currently, I am pursuing my studies in Informatics Engineering at Jabal Ghafur University. The combination of technical web development skills and UI/UX visual sensibility is my main strength in building digital solutions.">
+                            Saat ini, saya menempuh pendidikan Teknik Informatika di Universitas Jabal Ghafur. Kombinasi antara kemampuan teknis <em>web development</em> dan kepekaan visual <em>UI/UX design</em> adalah kekuatan utama saya dalam membangun solusi digital.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 border-t border-cardBorder pt-8 mb-8 animate-on-scroll stat-border">
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-purple-glow mb-2"><span class="counter" data-target="2">0</span>+</h3>
+                            <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest font-medium" data-id="TAHUN PENGALAMAN" data-en="YEARS EXPERIENCE">TAHUN PENGALAMAN</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-purple-glow mb-2"><span class="counter" data-target="2">0</span>+</h3>
+                            <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest font-medium" data-id="PROYEK SELESAI" data-en="PROJECTS DONE">PROYEK SELESAI</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-purple-glow mb-2"><span class="counter" data-target="2">0</span>+</h3>
+                            <p class="text-[10px] md:text-xs text-gray-500 uppercase tracking-widest font-medium" data-id="SERTIFIKASI" data-en="CERTIFICATIONS">SERTIFIKASI</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 animate-on-scroll">
+                    <a href="#" class="flex items-center space-x-2 bg-[#1a1a24] border border-[#2a2a3b] cv-btn text-gray-300 px-6 py-2.5 rounded-full hover:bg-gray-800 hover:text-white transition shadow-lg text-sm font-medium">
+                        <span data-id="Unduh CV" data-en="Download CV">Unduh CV</span>
+                        <i class="fa-solid fa-download text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech-stack" class="py-20 animate-on-scroll">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-xl md:text-2xl font-bold mb-3 text-white heading-text">Creative & Tech Stack</h2>
+                <div class="w-16 h-1 bg-neonPurple mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="tech-card p-6 flex flex-col items-center justify-center text-center rounded-2xl border border-cardBorder bg-[#111118]">
+                    <i class="fa-solid fa-code text-3xl text-[#61dafb] mb-3"></i>
+                    <h4 class="font-semibold text-sm mb-1 text-white heading-text">React</h4>
+                    <p class="text-[9px] text-gray-500 uppercase tracking-widest font-medium">Frontend Lib</p>
+                </div>
+                
+                <div class="tech-card p-6 flex flex-col items-center justify-center text-center rounded-2xl border border-cardBorder bg-[#111118]">
+                    <i class="fa-solid fa-palette text-3xl text-[#38b2ac] mb-3"></i>
+                    <h4 class="font-semibold text-sm mb-1 text-white heading-text">Tailwind</h4>
+                    <p class="text-[9px] text-gray-500 uppercase tracking-widest font-medium">CSS Framework</p>
+                </div>
+                
+                <div class="tech-card p-6 flex flex-col items-center justify-center text-center rounded-2xl border border-cardBorder bg-[#111118]">
+                    <i class="fa-solid fa-globe text-3xl text-gray-300 mb-3 text-icon"></i>
+                    <h4 class="font-semibold text-sm mb-1 text-white heading-text">Next.js</h4>
+                    <p class="text-[9px] text-gray-500 uppercase tracking-widest font-medium">Web Framework</p>
+                </div>
+                
+                <div class="tech-card p-6 flex flex-col items-center justify-center text-center rounded-2xl border border-cardBorder bg-[#111118]">
+                    <i class="fa-solid fa-terminal text-3xl text-[#007acc] mb-3"></i>
+                    <h4 class="font-semibold text-sm mb-1 text-white heading-text">VS Code</h4>
+                    <p class="text-[9px] text-gray-500 uppercase tracking-widest font-medium">Code Editor</p>
+                </div>
+                
+                <div class="tech-card p-6 flex flex-col items-center justify-center text-center rounded-2xl border border-cardBorder bg-[#111118]">
+                    <i class="fa-solid fa-code-branch text-3xl text-[#f34f29] mb-3"></i>
+                    <h4 class="font-semibold text-sm mb-1 text-white heading-text">Git / Github</h4>
+                    <p class="text-[9px] text-gray-500 uppercase tracking-widest font-medium">Version Control</p>
+                </div>
+
+                <div class="tech-card p-6 flex flex-col items-center justify-center text-center rounded-2xl border border-cardBorder bg-[#111118]">
+                    <i class="fa-solid fa-layer-group text-3xl text-[#31a8ff] mb-3"></i>
+                    <h4 class="font-semibold text-sm mb-1 text-white heading-text">Photoshop</h4>
+                    <p class="text-[9px] text-gray-500 uppercase tracking-widest font-medium">Image Editing</p>
+                </div>
+                
+                <div class="tech-card p-6 flex flex-col items-center justify-center text-center rounded-2xl border border-cardBorder bg-[#111118]">
+                    <i class="fa-solid fa-table-cells-large text-3xl text-[#00c4cc] mb-3"></i>
+                    <h4 class="font-semibold text-sm mb-1 text-white heading-text">Canva</h4>
+                    <p class="text-[9px] text-gray-500 uppercase tracking-widest font-medium">Layout Design</p>
+                </div>
+
+                <div class="tech-card p-6 flex flex-col items-center justify-center text-center rounded-2xl border border-cardBorder bg-[#111118]">
+                    <i class="fa-solid fa-video text-3xl text-[#ea77ff] mb-3"></i>
+                    <h4 class="font-semibold text-sm mb-1 text-white heading-text">Premiere Pro</h4>
+                    <p class="text-[9px] text-gray-500 uppercase tracking-widest font-medium">Video Editing</p>
+                </div>
+                
+                <div class="tech-card p-6 flex flex-col items-center justify-center text-center rounded-2xl border border-cardBorder bg-[#111118]">
+                    <i class="fa-solid fa-mobile-screen text-3xl text-gray-200 mb-3 text-icon"></i>
+                    <h4 class="font-semibold text-sm mb-1 text-white heading-text">CapCut</h4>
+                    <p class="text-[9px] text-gray-500 uppercase tracking-widest font-medium">Mobile Editing</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="proyek" class="py-20 relative animate-on-scroll">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4 text-white heading-text">
+                    <span data-id="Proyek" data-en="Selected">Proyek</span> 
+                    <span class="text-[#38b2ac]" data-id="Terpilih" data-en="Projects">Terpilih</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base font-medium" data-id="Beberapa karya yang menyoroti keahlian saya." data-en="Some works that highlight my expertise.">
+                    Beberapa karya yang menyoroti keahlian saya.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="project-card group relative overflow-hidden rounded-3xl bg-cardBg border border-cardBorder h-[320px]">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800" alt="MyFlix" class="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2 relative z-20">MAGIC CINEMA</h3>
+                        <div class="project-desc-container">
+                            <p class="text-gray-300 mb-4 text-sm md:text-base max-w-lg leading-relaxed project-desc" data-id="Prototipe platform streaming interaktif dengan integrasi YouTube, fitur pencarian, filter, dan daftar tontonan." data-en="Interactive streaming platform prototype with YouTube integration, search, filter, and watchlist features.">
+                               Prototipe platform streaming interaktif bergaya profesional yang mengintegrasikan video YouTube dengan fitur pencarian, filter genre, dan daftar tontonan.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-5 mt-2">
+                            <span class="px-2.5 py-1 text-[10px] font-bold tracking-widest text-[#e34f26] bg-[#e34f26]/10 border border-[#e34f26]/30 rounded-md uppercase">HTML</span>
+                            <span class="px-2.5 py-1 text-[10px] font-bold tracking-widest text-[#1572b6] bg-[#1572b6]/10 border border-[#1572b6]/30 rounded-md uppercase">CSS</span>
+                            <span class="px-2.5 py-1 text-[10px] font-bold tracking-widest text-[#f7df1e] bg-[#f7df1e]/10 border border-[#f7df1e]/30 rounded-md uppercase">JavaScript</span>
+                        </div>
+                        <a href="https://zaskiasalsabila006-rgb.github.io/platfrom-streaming-film2/" target="_blank" class="inline-flex items-center space-x-2 text-sm font-medium text-gray-400 hover:text-brandGreen transition">
+                            <span data-id="Lihat Source Code" data-en="View Source Code">Lihat Source Code</span>
+                            <i class="fa-brands fa-github text-base"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card group relative overflow-hidden rounded-3xl bg-cardBg border border-cardBorder h-[320px]">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400" alt="TERRA-OS" class="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full z-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2 relative z-20">TERRA-OS</h3>
+                        <div class="project-desc-container">
+                            <p class="text-gray-300 mb-4 text-sm leading-relaxed project-desc" data-id="Dashboard pemantau cuaca (dark mode) dengan visualisasi data suhu real-time API untuk wilayah Aceh." data-en="Weather monitoring dashboard (dark mode) with real-time API temperature data visualization for Aceh region.">
+                                Dashboard pemantau cuaca bergaya dark mode & glassmorphism dengan visualisasi grafik interaktif dari data suhu real-time API khusus wilayah Aceh.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-5 mt-2">
+                            <span class="px-2.5 py-1 text-[10px] font-bold tracking-widest text-[#38b2ac] bg-[#38b2ac]/10 border border-[#38b2ac]/30 rounded-md uppercase">Tailwind</span>
+                            <span class="px-2.5 py-1 text-[10px] font-bold tracking-widest text-[#f7df1e] bg-[#f7df1e]/10 border border-[#f7df1e]/30 rounded-md uppercase">JS</span>
+                            <span class="px-2.5 py-1 text-[10px] font-bold tracking-widest text-neonPurple bg-neonPurple/10 border border-neonPurple/30 rounded-md uppercase">API</span>
+                        </div>
+                        <a href="https://zaskiasalsabila006-rgb.github.io/suhu-tracker-1/" target="_blank" class="inline-flex items-center space-x-2 text-sm font-medium text-gray-400 hover:text-neonBlue transition">
+                            <span data-id="Lihat Source Code" data-en="View Source Code">Lihat Source Code</span>
+                            <i class="fa-brands fa-github text-base"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-20 relative mb-10 overflow-hidden animate-on-scroll">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="text-2xl md:text-4xl font-bold mb-4 text-white heading-text">
+                    <span data-id="Mari" data-en="Let's">Mari</span> 
+                    <span class="text-brandGreen" data-id="Terhubung" data-en="Connect">Terhubung</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base font-medium" data-id="Saya selalu terbuka untuk proyek baru atau sekadar obrolan. Kirimkan sinyal Anda." data-en="I am always open to new projects or just a chat. Send your signal.">
+                    Saya selalu terbuka untuk proyek baru atau sekadar obrolan. Kirimkan sinyal Anda.
+                </p>
+            </div>
+            <div class="about-card p-8 md:p-12 relative overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-3 mb-8">
+                                <div class="w-3.5 h-3.5 bg-gradient-to-r from-[#ffffff] to-[#a18cd1] rounded-full animate-pulse shadow-[0_0_12px_#a18cd1]"></div>
+                                <span class="gradient-text font-bold text-xs tracking-widest uppercase">System Status: Online</span>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="bg-[#15151e] inner-card border border-cardBorder p-4 rounded-xl flex items-center space-x-4">
+                                    <div class="bg-darkBg icon-wrapper p-3 rounded-lg text-brandGreen">
+                                        <i class="fa-regular fa-envelope text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] text-gray-500 uppercase tracking-wider font-semibold mb-0.5">Email Me</p>
+                                        <p class="text-sm font-semibold text-gray-200 label-text">zaskiasalsabila006@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="bg-[#15151e] inner-card border border-cardBorder p-4 rounded-xl flex items-center space-x-4">
+                                    <div class="bg-darkBg icon-wrapper p-3 rounded-lg text-brandGreen">
+                                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-[10px] text-gray-500 uppercase tracking-wider font-semibold mb-0.5">Chat Whatsapp</p>
+                                        <p class="text-sm font-semibold text-gray-200 label-text">-</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-12 flex items-center space-x-2 text-gray-600/50 text-xs font-mono uppercase font-bold">
+                            <i class="fa-solid fa-satellite-dish animate-pulse"></i>
+                            <span>Establishing Uplink...</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-3 mb-8">
+                            <i class="fa-regular fa-paper-plane text-[#a18cd1]"></i>
+                            <h3 class="text-white font-bold tracking-wide text-sm md:text-base heading-text">INITIATE DATA TRANSMISSION</h3>
+                        </div>
+                        <form class="space-y-8">
+                            <div class="relative border-b border-[#2a2a3b] form-border pb-2">
+                                <i class="fa-regular fa-user absolute left-0 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                                <input type="text" placeholder="ID Pengirim / Nama" class="w-full bg-transparent text-sm text-white focus:outline-none pl-8 placeholder-gray-500 font-medium input-field">
+                            </div>
+                            <div class="relative border-b border-[#2a2a3b] form-border pb-2">
+                                <i class="fa-regular fa-envelope absolute left-0 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+                                <input type="email" placeholder="Frekuensi Email" class="w-full bg-transparent text-sm text-white focus:outline-none pl-8 placeholder-gray-500 font-medium input-field">
+                            </div>
+                            <div>
+                                <textarea rows="4" placeholder="Data Transmisi Pesan" class="w-full bg-[#15151e] input-area border border-[#2a2a3b] text-sm text-white focus:outline-none focus:border-[#a18cd1] rounded-xl p-4 placeholder-gray-500 resize-none transition-colors font-medium"></textarea>
+                            </div>
+                            <button type="button" class="w-full bg-gradient-to-r from-[#a18cd1] to-neonPurple hover:from-neonPurple hover:to-[#a18cd1] text-white font-bold py-3.5 rounded-xl transition-all duration-300 flex justify-center items-center space-x-2 text-xs md:text-sm tracking-widest uppercase shadow-lg shadow-[#8b5cf6]/20">
+                                <span data-id="INISIASI TRANSMISI" data-en="INITIATE TRANSMISSION">INISIASI TRANSMISI</span>
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
